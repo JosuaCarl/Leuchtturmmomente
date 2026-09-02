@@ -15,7 +15,7 @@ Alle Inhalte werden über YAML-Dateien im `_data/`-Verzeichnis verwaltet. Es ist
 | Einstellung | Beschreibung |
 |---|---|
 | `title` | Name der Website |
-| `email` | Kontakt-E-Mail (auch für Contact-Formular) |
+| `email` | Kontakt-E-Mail |
 | `description` | Meta-Beschreibung |
 | `author` | Autorenname |
 | `locale` | Sprache (z. B. `de-DE`) |
@@ -32,7 +32,7 @@ Alle sichtbaren Textelemente der Site sind hier definiert:
 - **Angebote (Services)** — Titel, Untertitel und Liste der Dienste mit Icons (Font Awesome)
 - **Portfolio** — Titel und Beschreibung
 - **Team** — Titel und Untertitel (Mitglieder werden aus `_data/owner.yml` übernommen)
-- **Kontakt (Contact)** — Formular-Felder, Validierungstexte und Button-Text
+- **Kontakt (Contact)** — Titel, Untertitel
 - **Footer** — Impressum-Link und Social-Media-Icons
 
 Um eine Sektion zu entfernen, einfach die entsprechende YAML-Map löschen.
@@ -61,9 +61,9 @@ nav:
 
 ### Kontakt-Daten (`_data/owner.yml` und `_data/maintainer.yml`)
 
-Kontaktdaten sind zentral in YAML-Dateien gespeichert und werden automatisch im **Kontaktformular**, **Impressum**, **Datenschutzerklärung** und **Team-Sektion** verwendet:
+Kontaktdaten sind zentral in YAML-Dateien gespeichert und werden automatisch im **Kontaktbereich**, **Impressum**, **Datenschutzerklärung** und **Team-Sektion** verwendet:
 
-- **`_data/owner.yml`** — Website-Inhaber (Empfänger des Kontaktformulars, verantwortlich für Inhalte)
+- **`_data/owner.yml`** — Website-Inhaber (Empfänger der Kontakt-E-Mail, verantwortlich für Inhalte)
 - **`_data/maintainer.yml`** — Datenschutzbeauftragte(r)
 
 ```yaml
@@ -77,8 +77,6 @@ social:
   - url: https://instagram.com
     icon: fab fa-instagram
 ```
-
-**Wichtig:** Das Kontaktformular sendet an `site.email` in `_config.yml`. Stellen Sie sicher, dass diese Adresse mit `site.data.owner.email` übereinstimmt.
 
 ### Portfolio (`_portfolio/`)
 
@@ -117,6 +115,74 @@ oder für den Datenschutz-Verantwortlichen:
 
 ```liquid
 {% include contact-card.html data=site.data.maintainer %}
+```
+
+### Kontaktformular
+
+Aktuell wird im Kontaktbereich eine **mailto:-Schaltfläche** verwendet, die das E-Mail-Programm der Besucher:in öffnet.
+
+Für ein **echtes Formular** auf der Website kann [Formspree](https://formspree.io/) eingerichtet werden. So geht's:
+
+#### Formspree einrichten
+
+1. Registrieren Sie sich unter [formspree.io](https://formspree.io/)
+2. Erstellen Sie ein neues Formular (New Form)
+3. Tragen Sie Ihre Empfangs-E-Mail-Adresse ein (z. B. `josua.carl@web.de`)
+4. Kopieren Sie die **Form-ID** aus der URL (z. B. `https://formspree.io/f/xwkjzkqz` → `xwkjzkqz`)
+5. Tragen Sie die ID in `_config.yml` ein:
+
+```yaml
+formspree_form_path: "xwkjzkqz"
+```
+
+6. Ersetzen Sie die mailto-Schaltfläche in `_includes/contact.html` durch das Formspree-Formular:
+
+```html
+<form id="contactForm" action="https://formspree.io/f/{{ site.formspree_form_path }}" method="POST">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <input name="name" class="form-control" id="name" type="text"
+          placeholder="{{ site.data.sitetext[site.locale].contact.name }}" required>
+      </div>
+      <div class="form-group">
+        <input name="_replyto" class="form-control" id="email" type="email"
+          placeholder="{{ site.data.sitetext[site.locale].contact.email }}" required>
+      </div>
+      <div class="form-group">
+        <input name="phone" class="form-control" id="phone" type="tel"
+          placeholder="{{ site.data.sitetext[site.locale].contact.phone }}">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <textarea name="message" class="form-control" id="message"
+          placeholder="{{ site.data.sitetext[site.locale].contact.message }}" required></textarea>
+      </div>
+    </div>
+    <input type="hidden" name="_subject" value="{{ site.data.sitetext[site.locale].contact.subject }}">
+    <div class="col-lg-12 text-center">
+      <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">
+        {{ site.data.sitetext[site.locale].contact.submit }}
+      </button>
+    </div>
+    <input type="text" name="_gotcha" style="display:none">
+    <input type="hidden" name="_next" value="{{ site.url }}{{ site.baseurl }}/danke.html" />
+  </div>
+</form>
+```
+
+7. Optional: Eine Danke-Seite (`danke.md`) anlegen:
+
+```yaml
+---
+layout: page
+title: "Danke!"
+---
+
+# Vielen Dank für Ihre Nachricht!
+
+Ich werde mich in Kürze bei Ihnen melden.
 ```
 
 ### Rechtliches

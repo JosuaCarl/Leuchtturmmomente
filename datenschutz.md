@@ -10,7 +10,7 @@ title: "Datenschutzerklärung"
 ## 1. Verantwortlicher
 
 **{{ site.data.owner.name }}**
-{{ site.data.owner.address }}
+{% if site.data.owner.address %}{{ site.data.owner.address }}{% endif %}
 E-Mail: <{{ site.data.owner.email }}>
 
 Verantwortliche Stelle im Sinne der Datenschutz-Grundverordnung (DSGVO) ist die oben genannte Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen etc.) entscheidet.
@@ -56,25 +56,26 @@ Diese Website verwendet **keine Cookies**. Es werden keine tracking- oder analyt
 
 Lediglich technisch notwendige HTTP-Cookies können durch Ihren Browser für die korrekte Funktion des Browsers verwendet werden (z. B. Session-Management), diese sind nicht speicherbar nach dem Schließen des Browsers.
 
-## 3. Kontaktformular
+## 3. E-Mail-Kontakt
 
-Wenn Sie uns über das Kontaktformular auf dieser Website erreichen, werden folgende Daten verarbeitet:
+Über die Schaltfläche im Kontaktbereich wird ein E-Mail-Programm Ihres Geräts mit Ihrer E-Mail-Adresse als Empfänger geöffnet. Sie können dann selbst Nachrichtentext und weitere Empfänger eingeben.
 
-- Name
-- E-Mail-Adresse
-- Telefonnummer (optional)
-- Ihre Nachricht
+**Rechtsgrundlage:** [Art. 6 Abs. 1 lit. a DSGVO] (Einwilligung durch versenden der E-Mail).
 
-**Rechtsgrundlage:** [Art. 6 Abs. 1 lit. a DSGVO] (Einwilligung durch Absenden des Formulars).
+Die von Ihnen eingegebene Nachricht sowie Ihre Absender-E-Mail-Adresse werden direkt über Ihr E-Mail-Programm an **{{ site.data.owner.name }}** ([[site.data.owner.email|{{ site.data.owner.email }}]]) übermittelt. Die Daten verbleiben bei Ihrem E-Mail-Anbieter und werden von uns nicht weiterverarbeitet, bis Sie uns eine Antwort zusenden.
 
-Die Daten werden zur Bearbeitung Ihrer Anfrage an **{{ site.data.owner.name }}** ([[site.data.owner.email|{{ site.data.owner.email }}]]) übermittelt und nicht an Dritte weitergegeben.
+{% if site.data.owner.phone %}
+Zusätzlich ist unsere Telefonnummer <{{ site.data.owner.phone }}> für Rückfragen erreichbar. Die Übertragung der Telefonnummer erfolgt über Ihr E-Mail-Programm oder Ihr Telefonat.
+{% endif %}
 
 ## 4. Third-Party-Inhalte
 
 Diese Website kann folgende Third-Party-Inhalte enthalten:
 
-- **Social-Media-Icons:** Verlinkungen zu den eigenen Profilen von **{{ site.data.owner.name }}**. Beim Klicken auf die Icons wird die jeweilige Social-Media-Plattform aufgerufen. Es erfolgt keine Datenübertragung durch die Website selbst.
+- **Social-Media-Icons:** Verlinkungen zu den eigenen Profilen von **{{ site.data.owner.name }}**. Beim Klicken auf die Icons wird die jeweilige Social-Media-Plattform aufgerufen. Es erfolgt keine Datenübertragung durch die Website selbst. Empfohlen wird die Nutzung von lokal eingebundenen Icons statt Font Awesome CDN.
 - **Bilder:** Alle Bilder werden von eigenem Server geladen. Es werden keine externen Bilddienste verwendet.
+
+**Empfehlung:** Zur vollständigen DSGVO-Konformität sollten Social-Media-Icons lokal eingebunden werden (statt über Font Awesome CDN) und externe Fonts durch system fonts ersetzt werden.
 
 ## 5. Ihre Rechte
 
