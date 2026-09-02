@@ -1,0 +1,21 @@
+# Site settings
+remote_theme: raviriley/agency-jekyll-theme
+url: ""
+baseurl: ""
+title: "Leuchtturmmomente"
+email: "kontakt@leuchtturmmomente.de"
+description: "Trauerreden, die berühren und trösten"
+author: "Ihr Name"
+locale: "de-DE"
+
+analytics:
+  google:
+
+collections:
+  portfolio:
+
+markdown: kramdown
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed

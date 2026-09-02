@@ -1,0 +1,20 @@
+#
+# Work based on https://github.com/mmistakes/minimal-mistakes/blob/master/_data/ui-text.yml
+#
+
+# German
+# -------
+de: &DEFAULT_DE
+  nav:
+    - title: "Angebote"
+      section: services
+    - title: "Portfolio"
+      section: portfolio
+    - title: "Über"
+      section: about
+    - title: "Team"
+      section: team
+    - title: "Kontakt"
+      section: contact
+de-DE:
+  <<: *DEFAULT_DE

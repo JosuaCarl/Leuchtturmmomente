@@ -1,0 +1,17 @@
+# Build artifacts
+_site/
+vendor/
+
+# Caches
+.jekyll-cache/
+
+# Ruby dependency lock file
+# Commit this if you want to pin exact gem versions across environments
+# Otherwise leave it untracked to avoid platform conflicts
+Gemfile.lock
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo

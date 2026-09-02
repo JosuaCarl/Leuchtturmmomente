@@ -1,0 +1,85 @@
+#
+# Work based on https://github.com/mmistakes/minimal-mistakes/blob/master/_data/ui-text.yml
+#
+# Configuration: Add to _config.yml
+# locale: "de-DE"  [YOUR PREFERRED LOCALE]
+#
+
+# German (default)
+# -----------------
+de: &DEFAULT_DE
+  header:
+    title: "Willkommen bei Leuchtturmmomente"
+    text: "Trauerreden, die berühren und trösten"
+    button: "Mehr erfahren"
+    buttonlink: "#services"
+
+  about:
+    title: "Über uns"
+    text: "Unsere Geschichte"
+    body: "Individuelle Trauerreden, die Nähe stiften und Halt geben. Hinter Leuchtturmmomente steht die Überzeugung, dass ein Abschiedswort authentisch und persönlich sein sollte. Jede Rede wird für Sie erarbeitet – sensibel, wertschätzend und genau auf den verstorbenen Menschen abgestimmt. Lassen Sie uns gemeinsam einen würdevollen Abschluss gestalten."
+    section: about
+
+  services:
+    title: "Angebote"
+    text: "Begleitung in schweren Zeiten"
+    section: services
+    list:
+      - title: "Trauerreden gestalten"
+        desc: "Persönliche Abschiedsworte, die die Beziehung zum Verstorbenen einfangen und nahbar machen. Jede Rede wird individuell für Sie geschrieben."
+        icon: fas fa-pen-fancy
+      - title: "Trauerreden vortragen"
+        desc: "Professioneller Vortrag Ihrer Trauerrede auf der Beerdigung. Einfühlsam vorgetragen, mit der Ruhe und Würde, die ein Abschied verdient."
+        icon: fas fa-microphone-alt
+      - title: "Trauerbegleitung"
+        desc: "Beratung und Begleitung durch den gesamten Prozess: Von der ersten Idee über das Verfassen bis hin zur Übung und Vorbereitung auf den letzten Moment."
+        icon: fas fa-hands-holding-heart
+
+  portfolio:
+    title: "Portfolio"
+    text: "Ausgewählte Trauerreden"
+    section: portfolio
+    closebutton: "Schließen"
+
+  team:
+    title: "Unser Team"
+    text: "Unsere Trauerredner"
+    subtext: "Leidenschaft für Worte in Momenten, die sie verdienen."
+    section: team
+    people:
+      - name: "Ihr Name"
+        role: "Trauerrednerin & Texterin"
+        image: assets/img/team/team-1.jpg
+        social:
+          - url: https://linkedin.com
+            icon: fab fa-linkedin-in
+          - url: https://instagram.com
+            icon: fab fa-instagram
+
+  contact:
+    title: "Kontakt"
+    text: "Wir sind für Sie da"
+    section: contact
+    name: "Name*"
+    name-validation: "Bitte geben Sie Ihren Namen ein."
+    email: "E-Mail*"
+    email-validation: "Bitte geben Sie Ihre E-Mail-Adresse ein."
+    phone: "Telefonnummer"
+    phone-validation: "Bitte geben Sie Ihre Telefonnummer ein."
+    message: "Nachricht*"
+    message-validation: "Bitte geben Sie eine Nachricht ein."
+    subject: "Kontaktformular-Einsendung"
+    submit: "Nachricht senden"
+
+  footer:
+    legal: "Impressum & Datenschutz"
+    social:
+      - url: https://linkedin.com
+        icon: "fab fa-linkedin-in"
+      - url: https://instagram.com
+        icon: "fab fa-instagram"
+      - url: https://facebook.com
+        icon: "fab fa-facebook-f"
+
+de-DE:
+  <<: *DEFAULT_DE
