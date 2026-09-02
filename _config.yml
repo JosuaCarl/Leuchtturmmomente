@@ -8,9 +8,6 @@ description: "Trauerreden, die berühren und trösten"
 author: "Josua Carl"
 locale: "de-DE"
 
-analytics:
-  google:
-
 collections:
   portfolio:
   texts:
