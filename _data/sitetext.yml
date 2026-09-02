@@ -46,13 +46,7 @@ de: &DEFAULT_DE
     text: "Unsere Trauerredner"
     subtext: "Leidenschaft für Worte in Momenten, die sie verdienen."
     section: team
-    people:
-      - name: "Ellen Twesten"
-        role: "Trauerrednerin & Texterin"
-        image: assets/img/team/face-smile-regular-full.svg
-        social:
-          - url: https://instagram.com
-            icon: fab fa-instagram
+    people: []
 
   contact:
     title: "Kontakt"

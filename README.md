@@ -31,7 +31,7 @@ Alle sichtbaren Textelemente der Site sind hier definiert:
 - **Über (About)** — Beschreibungstext des Abschnitts
 - **Angebote (Services)** — Titel, Untertitel und Liste der Dienste mit Icons (Font Awesome)
 - **Portfolio** — Titel und Beschreibung
-- **Team** — Teammitglieder mit Namen, Rolle, Bild und Social-Links
+- **Team** — Titel und Untertitel (Mitglieder werden aus `_data/owner.yml` übernommen)
 - **Kontakt (Contact)** — Formular-Felder, Validierungstexte und Button-Text
 - **Footer** — Impressum-Link und Social-Media-Icons
 
@@ -59,6 +59,27 @@ nav:
 | `header-image` | Hintergrundbild des Header-Bereichs |
 | `contact-image` | Bild im Kontaktbereich |
 
+### Kontakt-Daten (`_data/owner.yml` und `_data/maintainer.yml`)
+
+Kontaktdaten sind zentral in YAML-Dateien gespeichert und werden automatisch im **Kontaktformular**, **Impressum**, **Datenschutzerklärung** und **Team-Sektion** verwendet:
+
+- **`_data/owner.yml`** — Website-Inhaber (Empfänger des Kontaktformulars, verantwortlich für Inhalte)
+- **`_data/maintainer.yml`** — Datenschutzbeauftragte(r)
+
+```yaml
+# _data/owner.yml
+name: "Max Mustermann"
+email: "max@beispiel.de"
+phone: "+49 123 456 789"
+role: "Inhaberin & Trauerrednerin"
+image: "assets/img/team/portrait.jpg"
+social:
+  - url: https://instagram.com
+    icon: fab fa-instagram
+```
+
+**Wichtig:** Das Kontaktformular sendet an `site.email` in `_config.yml`. Stellen Sie sicher, dass diese Adresse mit `site.data.owner.email` übereinstimmt.
+
 ### Portfolio (`_portfolio/`)
 
 Jede Datei ist ein Portfolio-Eintrag:
@@ -83,6 +104,33 @@ layout: page
 
 Hier steht der Seiteninhalt als Markdown oder **HTML**.
 ```
+
+### Kontakt-Karte einbetten
+
+Um eine Kontakt-Karte an beliebiger Stelle einzufügen (z. B. in der "Über"-Sektion), nutzen Sie diesen Include:
+
+```liquid
+{% include contact-card.html data=site.data.owner %}
+```
+
+oder für den Datenschutz-Verantwortlichen:
+
+```liquid
+{% include contact-card.html data=site.data.maintainer %}
+```
+
+### Rechtliches
+
+Diese Site enthält zwei rechtliche Seiten:
+
+- **`legal.md`** — Impressum gemäß § 5 DDG (verlinkt im Footer)
+- **`datenschutz.md`** — Datenschutzerklärung DSGVO-konform
+
+Die Daten werden automatisch aus `_data/owner.yml` und `_data/maintainer.yml` bezogen. Ändern Sie diese YAML-Dateien, um Impressum und Datenschutz aktuell zu halten.
+
+> **Hinweis:** Diese Seiten dienen als Vorlage und ersetzen keine Rechtsberatung. Für eine rechtssichere Gestaltung empfiehlt sich die Prüfung durch einen Rechtsanwalt oder eine offizielle Generators wie e-recht24.de oder datenschutz-generator.de.
+
+> **Cookie-Banner:** Dieser Site verwendet derzeit keine Cookies, kein Tracking und keine Analytics — daher ist aktuell kein Cookie-Banner erforderlich. Sobald Sie jedoch Third-Party-Dienste einbetten (Google Analytics, YouTube-Videos, Google Fonts, Social-Share-Buttons), wird ein Consent-Banner nach DSGVO erforderlich.
 
 ## Lokale Entwicklung
 
