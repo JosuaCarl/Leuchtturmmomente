@@ -169,12 +169,12 @@ formspree_form_path: "xwkjzkqz"
       </button>
     </div>
     <input type="text" name="_gotcha" style="display:none">
-    <input type="hidden" name="_next" value="{{ site.url }}{{ site.baseurl }}/texts/danke.html" />
+    <input type="hidden" name="_next" value="{{ site.url }}{{ site.baseurl }}/_texts/danke.html" />
   </div>
 </form>
 ```
 
-7. Optional: Eine Danke-Seite (`texts/danke.md`) anlegen:
+7. Optional: Eine Danke-Seite (`_texts/danke.md`) anlegen:
 
 ```yaml
 ---
@@ -189,11 +189,11 @@ Ich werde mich in Kürze bei Ihnen melden.
 
 ### Rechtliches
 
-Alle rechtlichen Texte befinden sich im `texts/`-Verzeichnis:
+Alle rechtlichen Texte befinden sich im `_texts/`-Verzeichnis:
 
-- **`texts/legal.md`** — Impressum gemäß § 5 DDG (im Footer verlinkt über `/texts/legal`)
-- **`texts/datenschutz.md`** — Datenschutzerklärung DSGVO-konform (im Impressum verlinkt über `/texts/datenschutz`)
-- **`texts/danke.md`** — Bestätigungsseite für Formspree-Formular
+- **`_texts/legal.md`** — Impressum gemäß § 5 DDG (im Footer verlinkt über `/_texts/legal`)
+- **`_texts/datenschutz.md`** — Datenschutzerklärung DSGVO-konform (im Impressum verlinkt über `/_texts/datenschutz`)
+- **`_texts/danke.md`** — Bestätigungsseite für Formspree-Formular
 
 Die Daten werden automatisch aus `_data/owner.yml` und `_data/maintainer.yml` bezogen. Ändern Sie diese YAML-Dateien, um Impressum und Datenschutz aktuell zu halten.
 
