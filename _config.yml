@@ -12,6 +12,8 @@ collections:
   portfolio:
   texts:
     output: true
+  timeline:
+    output: true
 
 markdown: kramdown
 

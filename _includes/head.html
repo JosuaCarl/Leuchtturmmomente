@@ -1,18 +1,4 @@
 <head>
-  {% if site.analytics.google %}
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.google }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "{{ site.analytics.google }}");
-  </script>
-  <!-- End Google Analytics -->
-  {% endif %}
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -84,6 +70,14 @@
       font-style: normal;
       font-weight: 700;
       src: url("{{ site.baseurl }}/assets/fonts/RobotoSlab-Bold.ttf") format('truetype');
+    }
+  </style>
+
+  <!-- Masthead hero background height -->
+  <style>
+    header.masthead {
+      min-height: 100vh;
+      min-height: 100dvh;
     }
   </style>
 

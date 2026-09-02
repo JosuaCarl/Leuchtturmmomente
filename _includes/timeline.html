@@ -1,0 +1,81 @@
+<!-- Timeline -->
+{% if site.locale and site.locale != "" and site.locale != nil %}
+<section class="bg-light page-section" id="{{ site.data.sitetext[site.locale].timeline.section | default: "timeline" }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].timeline.title | markdownify | default: "Timeline" }}</h2>
+        <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].timeline.text | default: ""}}</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <ul class="timeline">
+      {%- assign sorted_timeline = site.timeline | sort: "sort_order" -%}
+      {%- for event in sorted_timeline -%}
+            <li>
+              <div class="timeline-image">
+                <img class="rounded-circle img-fluid" src="{{ event.image }}" alt="{{ event.title }}">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4>{{ event.year }}</h4>
+                  <h4 class="subheading">{{ event.title }}</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">{{ event.desc }}</p>
+                </div>
+              </div>
+            </li>
+      {%- endfor -%}
+            <li class="timeline-inverted">
+              <div class="timeline-image">
+                <h4>Weiter geht's<br>mit Ihrem<br>Abschiedswort</h4>
+              </div>
+            </li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</section>
+{% else %}
+<section class="bg-light page-section" id="{{ site.data.sitetext.timeline.section | default: "timeline" }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">{{ site.data.sitetext.timeline.title | markdownify | default: "Timeline" }}</h2>
+        <h3 class="section-subheading text-muted">{{ site.data.sitetext.timeline.text | default: ""}}</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <ul class="timeline">
+      {%- assign sorted_timeline = site.timeline | sort: "sort_order" -%}
+      {%- for event in sorted_timeline -%}
+            <li>
+              <div class="timeline-image">
+                <img class="rounded-circle img-fluid" src="{{ event.image }}" alt="{{ event.title }}">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4>{{ event.year }}</h4>
+                  <h4 class="subheading">{{ event.title }}</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">{{ event.desc }}</p>
+                </div>
+              </div>
+            </li>
+      {%- endfor -%}
+            <li class="timeline-inverted">
+              <div class="timeline-image">
+                <h4>Weiter geht's<br>mit Ihrem<br>Abschiedswort</h4>
+              </div>
+            </li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+<!-- End Timeline -->

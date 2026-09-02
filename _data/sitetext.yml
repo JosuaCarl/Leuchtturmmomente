@@ -36,10 +36,15 @@ de: &DEFAULT_DE
         icon: fas fa-hand-holding-heart
 
   portfolio:
-    title: "Portfolio"
+    title: "Reden"
     text: "Ausgewählte Trauerreden"
     section: portfolio
     closebutton: "Schließen"
+
+  timeline:
+    title: "Mein Werdegang"
+    text: "Von der Inspiration bis zur Berufung"
+    section: timeline
 
   team:
     title: "Unser Team"
