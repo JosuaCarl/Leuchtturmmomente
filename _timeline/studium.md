@@ -1,7 +1,7 @@
 ---
 title: "Studium"
-year: "2010–2016"
+year: "2016–2026"
 image: "assets/img/timeline/1.jpg"
-desc: "Studium der Literaturwissenschaft und Psychologie an der Universität München. Erste Schritte in der Traumabewältigung und Sterbebegleitung."
+desc: "Studium der Rhetorik an der Universität Tübingen. Erste Schritte in der Traumabewältigung und Sterbebegleitung."
 sort_order: 1
 ---

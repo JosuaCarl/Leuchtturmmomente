@@ -5,7 +5,7 @@ title: "Datenschutzerklärung"
 
 # Datenschutzerklärung
 
-*Stand: September 2025*
+*Stand: September 2026*
 
 ## 1. Verantwortlicher
 
