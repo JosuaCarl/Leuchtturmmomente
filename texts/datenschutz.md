@@ -60,7 +60,7 @@ Lediglich technisch notwendige HTTP-Cookies können durch Ihren Browser für die
 
 Über die Schaltfläche im Kontaktbereich wird ein E-Mail-Programm Ihres Geräts mit Ihrer E-Mail-Adresse als Empfänger geöffnet. Sie können dann selbst Nachrichtentext und weitere Empfänger eingeben.
 
-**Rechtsgrundlage:** [Art. 6 Abs. 1 lit. a DSGVO] (Einwilligung durch versenden der E-Mail).
+**Rechtsgrundlage:** [Art. 6 Abs. 1 lit. a DSGVO] (Einwilligung durch aktives Versenden der E-Mail).
 
 Die von Ihnen eingegebene Nachricht sowie Ihre Absender-E-Mail-Adresse werden direkt über Ihr E-Mail-Programm an **{{ site.data.owner.name }}** ([[site.data.owner.email|{{ site.data.owner.email }}]]) übermittelt. Die Daten verbleiben bei Ihrem E-Mail-Anbieter und werden von uns nicht weiterverarbeitet, bis Sie uns eine Antwort zusenden.
 
@@ -72,10 +72,8 @@ Zusätzlich ist unsere Telefonnummer <{{ site.data.owner.phone }}> für Rückfra
 
 Diese Website kann folgende Third-Party-Inhalte enthalten:
 
-- **Social-Media-Icons:** Verlinkungen zu den eigenen Profilen von **{{ site.data.owner.name }}**. Beim Klicken auf die Icons wird die jeweilige Social-Media-Plattform aufgerufen. Es erfolgt keine Datenübertragung durch die Website selbst. Empfohlen wird die Nutzung von lokal eingebundenen Icons statt Font Awesome CDN.
+- **Social-Media-Icons:** Verlinkungen zu den eigenen Profilen von **{{ site.data.owner.name }}**. Beim Klicken auf die Icons wird die jeweilige Social-Media-Plattform aufgerufen. Es erfolgt keine Datenübertragung durch die Website selbst.
 - **Bilder:** Alle Bilder werden von eigenem Server geladen. Es werden keine externen Bilddienste verwendet.
-
-**Empfehlung:** Zur vollständigen DSGVO-Konformität sollten Social-Media-Icons lokal eingebunden werden (statt über Font Awesome CDN) und externe Fonts durch system fonts ersetzt werden.
 
 ## 5. Ihre Rechte
 

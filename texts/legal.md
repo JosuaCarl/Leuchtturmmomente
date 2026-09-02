@@ -8,7 +8,7 @@ title: "Impressum"
 ## Angaben gemäß § 5 DDG
 
 **{{ site.data.owner.name }}**
-{{ site.data.owner.address }}
+{% if site.data.owner.address %}{{ site.data.owner.address }}{% endif %}
 
 E-Mail: <{{ site.data.owner.email }}>
 {% if site.data.owner.phone %}Telefon: {{ site.data.owner.phone }}{% endif %}

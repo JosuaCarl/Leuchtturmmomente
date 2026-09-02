@@ -3,9 +3,9 @@ remote_theme: raviriley/agency-jekyll-theme
 url: ""
 baseurl: ""
 title: "Leuchtturmmomente"
-email: josua.carl@web.de#"kontakt@leuchtturm-momente.org"
+email: josua.carl@web.de
 description: "Trauerreden, die berühren und trösten"
-author: "Ihr Name"
+author: "Josua Carl"
 locale: "de-DE"
 
 analytics:
@@ -13,6 +13,8 @@ analytics:
 
 collections:
   portfolio:
+  texts:
+    output: true
 
 markdown: kramdown
 

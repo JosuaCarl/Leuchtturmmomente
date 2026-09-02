@@ -6,6 +6,8 @@ Website für Trauerreden.
 
 Diese Seite wurde mit [Jekyll](https://jekyllrb.com/) und dem [Agency Jekyll Theme](https://github.com/raviriley/agency-jekyll-theme) erstellt. Sie wird auf [GitHub Pages](https://pages.github.com/) gehostet.
 
+Alle Ressourcen (Fonts, Icons, CSS) sind **lokal eingebunden** — keine Abhängigkeiten von externen CDNs (Google Fonts, Font Awesome).
+
 ## Konfiguration
 
 Alle Inhalte werden über YAML-Dateien im `_data/`-Verzeichnis verwaltet. Es ist nicht nötig, HTML zu ändern.
@@ -167,12 +169,12 @@ formspree_form_path: "xwkjzkqz"
       </button>
     </div>
     <input type="text" name="_gotcha" style="display:none">
-    <input type="hidden" name="_next" value="{{ site.url }}{{ site.baseurl }}/danke.html" />
+    <input type="hidden" name="_next" value="{{ site.url }}{{ site.baseurl }}/texts/danke.html" />
   </div>
 </form>
 ```
 
-7. Optional: Eine Danke-Seite (`danke.md`) anlegen:
+7. Optional: Eine Danke-Seite (`texts/danke.md`) anlegen:
 
 ```yaml
 ---
@@ -187,10 +189,11 @@ Ich werde mich in Kürze bei Ihnen melden.
 
 ### Rechtliches
 
-Diese Site enthält zwei rechtliche Seiten:
+Alle rechtlichen Texte befinden sich im `texts/`-Verzeichnis:
 
-- **`legal.md`** — Impressum gemäß § 5 DDG (verlinkt im Footer)
-- **`datenschutz.md`** — Datenschutzerklärung DSGVO-konform
+- **`texts/legal.md`** — Impressum gemäß § 5 DDG (im Footer verlinkt über `/texts/legal`)
+- **`texts/datenschutz.md`** — Datenschutzerklärung DSGVO-konform (im Impressum verlinkt über `/texts/datenschutz`)
+- **`texts/danke.md`** — Bestätigungsseite für Formspree-Formular
 
 Die Daten werden automatisch aus `_data/owner.yml` und `_data/maintainer.yml` bezogen. Ändern Sie diese YAML-Dateien, um Impressum und Datenschutz aktuell zu halten.
 
@@ -217,3 +220,15 @@ Erforderlich: Ruby ≥ 3.0, `ruby3.2-dev` und `libssl-dev` (für native Extensio
 1. Repository auf GitHub pushen
 2. Settings → Pages → Source auf **GitHub Actions** oder **Deploy from a branch** stellen (Branch: `main`)
 3. Falls nötig: `url` und `baseurl` in `_config.yml` anpassen
+
+## Lokale Ressourcen
+
+Alle Assets sind selbst gehostet — keine externen CDN-Abhängigkeiten:
+
+| Ressource | Pfad |
+|---|---|
+| Google Fonts (Montserrat, Kaushan Script, Droid Serif, Roboto Slab) | `assets/fonts/*.ttf` |
+| Font Awesome 6 (Icons) | `assets/css/all.min.css` + `assets/webfonts/*.woff2` |
+| Bootstrap | `assets/css/bootstrap.min.css` |
+| Agency Theme Styles | `assets/css/agency.css` |
+| Jquery & Plugins | `assets/js/jquery.min.js`, `assets/js/bootstrap.bundle.min.js`, `assets/js/agency.min.js` |
