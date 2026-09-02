@@ -1,7 +1,7 @@
 ---
 title: "Abschied von einem Vater"
 subtitle: "Ein Leben voller Leidenschaft"
-image: /assets/portfolio/cap-silouette.jpg
+image: assets/portfolio/cap-silouette.jpg
 category: "Familie"
 ---
 
