@@ -17,7 +17,7 @@ de: &DEFAULT_DE
   about:
     title: "Über uns"
     text: "Unsere Geschichte"
-    body: "Individuelle Trauerreden, die Nähe stiften und Halt geben. Hinter Leuchtturmmomente steht die Überzeugung, dass ein Abschiedswort authentisch und persönlich sein sollte. Jede Rede wird für Sie erarbeitet – sensibel, wertschätzend und genau auf den verstorbenen Menschen abgestimmt. Lassen Sie uns gemeinsam einen würdevollen Abschluss gestalten."
+    body: "Individuelle Trauerreden, die Nähe stiften und Halt geben. Hinter Leuchtturmmomente steht die Überzeugung, dass ein Abschiedswort authentisch und persönlich sein sollte. Dass es für jedes Leben prägende Momente gab die bestehen bleiben. Jede Rede wird für Sie erarbeitet – sensibel, wertschätzend und genau auf den verstorbenen Menschen abgestimmt. Lassen Sie uns gemeinsam einen würdevollen Abschluss gestalten."
     section: about
 
   services:
@@ -33,7 +33,7 @@ de: &DEFAULT_DE
         icon: fas fa-microphone-alt
       - title: "Trauerbegleitung"
         desc: "Beratung und Begleitung durch den gesamten Prozess: Von der ersten Idee über das Verfassen bis hin zur Übung und Vorbereitung auf den letzten Moment."
-        icon: fas fa-hands-holding-heart
+        icon: fas fa-hand-holding-heart
 
   portfolio:
     title: "Portfolio"
@@ -47,12 +47,10 @@ de: &DEFAULT_DE
     subtext: "Leidenschaft für Worte in Momenten, die sie verdienen."
     section: team
     people:
-      - name: "Ihr Name"
+      - name: "Ellen Twesten"
         role: "Trauerrednerin & Texterin"
-        image: assets/img/team/team-1.jpg
+        image: assets/img/team/face-smile-regular-full.svg
         social:
-          - url: https://linkedin.com
-            icon: fab fa-linkedin-in
           - url: https://instagram.com
             icon: fab fa-instagram
 
