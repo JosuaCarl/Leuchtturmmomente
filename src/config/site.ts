@@ -70,6 +70,7 @@ export const SITE = {
     //{ label: "Reviews", href: "/#reviews" },
     { label: "Info", href: "/#info" },
     { label: "Kontakt", href: "/#contact" },
+    { label: "Über mich", href: "/about-me" },
   ],
 
   // --- Hero section -----------------------------------------------------------
@@ -128,9 +129,11 @@ export const SITE = {
     paragraphs: [
       "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.",
       "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.",
+      "Mehr über mich" 
     ],
     image: "/images/about.jpg",
     imageAlt: "Lampe mit einzelnen ausstrahlenden Lichtpunkten.",
+    links: {"Mehr über mich": "/about-me"}
   },
 
   // --- Gallery (4 to 8 images) ---------------------------------------------------
@@ -144,6 +147,27 @@ export const SITE = {
       { src: "/images/gallery-1.webp", alt: "Wooden shelves stacked with rustic sourdough loaves" },
     ],
   */
+  },
+
+  aboutMe: {
+    eyebrow: "Zu mir",
+    title: "Eine kleine Vorstellung",
+    paragraphs: [
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.",
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."
+    ],
+    image: "/images/Ellen.jpg",
+    imageAlt: "Ellen im Profil (Eine Frau mit roten, kurzen Haaren in schwarzem Kleid)."
+  },
+
+  personalGallery: {
+    eyebrow: "Fotos",
+    title: "Eindrücke",
+    // The first image is featured (2×2 in the grid): 5 or 7 images fill the
+    // grid perfectly on desktop.
+    images: [
+      { src: "/images/about.jpg", alt: "Nur ein Platzhalter" },
+    ],
   },
 
   // --- Customer reviews (copied from the business's Google profile) --------------

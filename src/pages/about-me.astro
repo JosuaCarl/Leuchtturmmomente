@@ -1,0 +1,11 @@
+---
+import Base from "../layouts/Base.astro";
+import PersonalGallery from "../components/sections/PersonalGallery.astro";
+import AboutMe from "../components/sections/AboutMe.astro";
+import { SITE } from "../config/site";
+---
+
+<Base title={`${SITE.name} — ${SITE.tagline}`} description={SITE.description} withJsonLd>
+  <AboutMe />
+  <PersonalGallery />
+</Base>
