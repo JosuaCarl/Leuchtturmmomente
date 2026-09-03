@@ -11,12 +11,15 @@ const { reviews, ui } = SITE;
 const STAR_PATH =
   "M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.4L12 17.4l-5.8 3 1.1-6.4L2.6 9.4l6.5-.9z";
 
+const enabled = Object.keys(reviews).length !== 0
+
 // Aggregate rating computed at build time from the configured reviews
-const average =
-  reviews.items.reduce((sum, item) => sum + item.rating, 0) / reviews.items.length;
+const average = enabled ? reviews.items.reduce((sum, item) => sum + item.rating, 0) / reviews.items.length : 0;
 const averageLabel = (Math.round(average * 10) / 10).toFixed(1);
 const averageRounded = Math.round(average);
 ---
+
+{ enabled &&
 
 <section id="reviews" class="section section-alt">
   <div class="container">
@@ -189,3 +192,4 @@ const averageRounded = Math.round(average);
     margin-top: var(--space-3);
   }
 </style>
+}

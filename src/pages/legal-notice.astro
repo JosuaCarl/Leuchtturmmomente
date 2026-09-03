@@ -18,17 +18,17 @@ const { legal, business, ui } = SITE;
   <div class="container page-content">
     <h1>{ui.legalNoticeLabel}</h1>
 
-    <h2>Site publisher</h2>
+    <h2>Verantwortliche</h2>
     <p>
       {SITE.name}, {legal.companyType}<br />
       {business.address.street}, {business.address.postalCode}
       {business.address.city}<br />
-      Registration number: {legal.registrationNumber}<br />
-      Phone: <a href={`tel:${business.phone}`}>{business.phone}</a><br />
+      Registrierung: {legal.registrationNumber}<br />
+      Telefon: <a href={`tel:${business.phone}`}>{business.phone}</a><br />
       Email: <a href={`mailto:${business.email}`}>{business.email}</a>
     </p>
 
-    <h2>Publishing director</h2>
+    <h2>Herausgeber</h2>
     <p>{legal.publisher}</p>
 
     <h2>Hosting</h2>
@@ -40,11 +40,10 @@ const { legal, business, ui } = SITE;
       </a>
     </p>
 
-    <h2>Intellectual property</h2>
+    <h2>Eigentum</h2>
     <p>
-      All content on this site (text, images, logo) is the exclusive property
-      of {SITE.name} unless stated otherwise. Any reproduction, even partial,
-      requires prior written permission.
+      Der gesamte Inhalt der Seite gehört {SITE.name}. Ausgenommen davon sind Bilder
+      aus dem Public Domain. Jede Reproduktion setzt ausdrückliches Einverständnis der Inhaber*innen voraus.
     </p>
   </div>
 </Base>

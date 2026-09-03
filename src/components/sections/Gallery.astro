@@ -6,7 +6,9 @@
 import { SITE } from "../../config/site";
 
 const { gallery } = SITE;
+const enabled = Object.keys(gallery).length !== 0
 ---
+{ enabled &&
 
 <section id="gallery" class="section">
   <div class="container">
@@ -92,3 +94,4 @@ const { gallery } = SITE;
     }
   }
 </style>
+}

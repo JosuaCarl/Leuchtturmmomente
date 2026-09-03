@@ -1,8 +1,0 @@
-#Color Customization
-highlight: "#e6b800"
-white: "#FAFAFA"
-black: "#000000"
-
-#Image Customization
-header-image: "../img/header.png"
-contact-image: ""

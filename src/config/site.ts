@@ -53,23 +53,23 @@ export const SITE = {
   // --- Opening hours (shown on the site AND injected into the JSON-LD) -------
   // days: 0 = Monday ... 6 = Sunday. closed: true = closing day.
   openingHours: [
-    { label: "Monday", days: [0], opens: "06:30", closes: "19:00" },
-    { label: "Tuesday", days: [1], opens: "06:30", closes: "19:00" },
-    { label: "Wednesday", days: [2], closed: true },
-    { label: "Thursday", days: [3], opens: "06:30", closes: "19:00" },
-    { label: "Friday", days: [4], opens: "06:30", closes: "19:00" },
-    { label: "Saturday", days: [5], opens: "06:30", closes: "19:30" },
-    { label: "Sunday", days: [6], opens: "07:00", closes: "13:00" },
+    { label: "Monday", days: [0], opens: "09:00", closes: "17:00" },
+    { label: "Tuesday", days: [1], opens: "09:00", closes: "17:00" },
+    { label: "Wednesday", days: [2], opens: "09:00", closes: "17:00"  },
+    { label: "Thursday", days: [3], opens: "09:00", closes: "17:00" },
+    { label: "Friday", days: [4], opens: "09:00", closes: "17:00" },
+    { label: "Saturday", days: [5], closed: true },
+    { label: "Sunday", days: [6], closed: true },
   ] as OpeningHours[],
 
   // --- Navigation (home page anchors + pages) --------------------------------
   navigation: [
-    { label: "Our products", href: "/#services" },
-    { label: "Our story", href: "/#about" },
-    { label: "Gallery", href: "/#gallery" },
-    { label: "Reviews", href: "/#reviews" },
-    { label: "Visit us", href: "/#info" },
-    { label: "Contact", href: "/#contact" },
+    { label: "Angebote", href: "/#services" },
+    { label: "Geschichte", href: "/#about" },
+    //{ label: "Gallery", href: "/#gallery" },
+    //{ label: "Reviews", href: "/#reviews" },
+    { label: "Info", href: "/#info" },
+    { label: "Kontakt", href: "/#contact" },
   ],
 
   // --- Hero section -----------------------------------------------------------
@@ -85,10 +85,10 @@ export const SITE = {
     titleHighlight: "Momente",
     subtitle:
       "Individuelle Trauerreden, die Nähe stiften und Halt geben. Hinter Leuchtturmmomente steht die Überzeugung, dass aus jedem Leben prägende Momente bestehen bleiben.",
-    image: "/images/hero.png",
+    image: "../src/images/hero.png",
     imageAlt: "Freshly baked sourdough loaf held on a linen cloth",
     primaryCta: { label: "Unsere Angebote", href: "/#services" },
-    secondaryCta: { label: "Sie finden uns hier", href: "/#info" },
+    secondaryCta: { label: "Hier finden sie uns", href: "/#info" },
     // Trust badges shown under the buttons (2 to 4 short items).
     // Great spots for the Google rating, founding year, a signature promise.
     highlights: ["Jede Rede individuell abgestimmt", "Vertrauensvoller Umgang", "Erfahrung seit 2024"], //" ★ 4.7 auf Google", 
@@ -123,35 +123,34 @@ export const SITE = {
 
   // --- About -------------------------------------------------------------------
   about: {
-    eyebrow: "Since 1987",
-    title: "Our story",
+    eyebrow: "Seit 2024",
+    title: "Unsere Geschichte",
     paragraphs: [
-      "Settled on rue du Docteur Paccard since 1987, The Alpine Loaf has been run by the Ravanel family for three generations. We work exclusively with stone-milled Alpine flours and a sourdough starter we have kept alive for over thirty years.",
-      "Summer and winter alike, the ovens are lit at 3am so that mountain guides, seasonal workers and families find warm bread the minute we open.",
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.",
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.",
     ],
-    image: "/images/about.webp",
+    image: "../src/images/about.jpg",
     imageAlt: "Baker's hands kneading floured dough on a dark workbench",
   },
 
   // --- Gallery (4 to 8 images) ---------------------------------------------------
   gallery: {
+  /*
     eyebrow: "Behind the counter",
     title: "In pictures",
     // The first image is featured (2×2 in the grid): 5 or 7 images fill the
     // grid perfectly on desktop.
     images: [
       { src: "/images/gallery-1.webp", alt: "Wooden shelves stacked with rustic sourdough loaves" },
-      { src: "/images/gallery-2.webp", alt: "Golden croissants in the bakery display case" },
-      { src: "/images/gallery-3.webp", alt: "Éclairs and cream puffs lined up on the pastry counter" },
-      { src: "/images/gallery-4.webp", alt: "The bakery storefront and its green woodwork" },
-      { src: "/images/gallery-5.webp", alt: "Baker presenting a crusty boule over the wooden counter" },
     ],
+  */
   },
 
   // --- Customer reviews (copied from the business's Google profile) --------------
   reviews: {
-    eyebrow: "Reviews",
-    title: "In their words",
+    /*
+    eyebrow: "Eindrücke",
+    title: "In ihren Worten",
     // Link to the "reviews" tab of the Google profile, to read or leave more
     allReviewsUrl: "https://maps.google.com/?cid=EXAMPLE",
     items: [
@@ -160,60 +159,43 @@ export const SITE = {
         rating: 5,
         text: "The best bread in the valley, hands down. The stone-milled boule keeps for a week and the mont-blanc is to die for.",
       },
-      {
-        author: "Thomas B.",
-        rating: 5,
-        text: "Open early — perfect before heading out on a route. The baguette sandwiches are generous and the coffee is good.",
-      },
-      {
-        author: "Elena K.",
-        rating: 4,
-        text: "Wonderful bakery, authentic sourdough bread. A bit of a queue on Saturday mornings but absolutely worth it.",
-      },
     ],
-  },
-
-  // --- FAQ (SEO bonus: questions people actually type into Google) ---------------
-  faq: {
-    eyebrow: "Good to know",
-    title: "Frequently asked questions",
-    items: [
-      {
-        question: "Do you bake special breads to order?",
-        answer:
-          "Yes: rye loaves, gluten-free (dedicated oven on Tuesdays) and large pieces for restaurants and mountain huts, ordered 48 hours ahead by phone.",
-      },
-      {
-        question: "Can I order a birthday or wedding cake?",
-        answer:
-          "Of course. Allow one week's notice for tiered and custom cakes. Drop by the shop and we'll design it together.",
-      },
-      {
-        question: "Are you open between seasons?",
-        answer:
-          "Yes, all year round except Wednesdays and three weeks in November. Holiday dates are posted in the shop and on our Google profile.",
-      },
-      {
-        question: "Where can I park near the bakery?",
-        answer:
-          "The Mont-Blanc car park is a 3-minute walk away, and there is a drop-off zone right outside the shop on rue du Docteur Paccard.",
-      },
-    ],
+    */
   },
 
   // --- Call-to-action banner ------------------------------------------------------
   ctaBanner: {
-    title: "Planning an event?",
-    text: "Buffets, weddings, seminars or mountain-hut resupply: write to us and we'll send a quote within 24 hours.",
-    button: { label: "Request a quote", href: "/#contact" },
+    title: "Wir sind für Sie da",
+    text: "Leidenschaft für Worte in Momenten, die sie verdienen.",
+    button: { label: "Kontakt", href: "/#contact" },
+  },
+
+
+  // --- FAQ (SEO bonus: questions people actually type into Google) ---------------
+  faq: {
+    eyebrow: "Gut zu wissen",
+    title: "Häufige Fragen",
+    items: [
+      {
+        question: "Muss die Leiche schon kühl sein, damit sie unter die Erde kann?",
+        answer:
+          "Nein: Ab unter die Erde und zu den Deckel!",
+      },
+      {
+        question: "Welches Material sollte ich bereit stellen?",
+        answer:
+          "Um die Rede individuell zu gestalten braucht es nicht mehr als gemeinsame Gespräche, wenn sie jedoch etwas haben, dass einfließen soll, können sie uns das gerne mitteilen. " +
+          "Fotos, Briefe oder ähnliche Andenken können sie gerne mitbringen, müssen das aber nicht.",
+      },
+    ],
   },
 
   // --- Contact form ------------------------------------------------------------------
   contact: {
-    eyebrow: "Get in touch",
-    title: "Write to us",
+    eyebrow: "Kontakt",
+    title: "Schreiben sie uns",
     intro:
-      "A question, a special order? Leave us a message — we reply within one business day.",
+      "Lassen sie uns ihre Nachricht da, wir antworten in der Regel innerhalb eines Werktages.",
     // Form endpoint. Options:
     //  1. Formspree/Basin: paste the URL the service gives you.
     //  2. Your own backend (any endpoint accepting a classic form POST).
@@ -229,13 +211,13 @@ export const SITE = {
   // Shown on /legal-notice/ — mandatory for professional sites in many
   // EU countries (e.g. France's LCEN, Germany's Impressumspflicht).
   legal: {
-    companyType: "SARL with a capital of €10,000",
+    companyType: "NONE_YET",
     registrationNumber: "000 000 000 00000",
-    publisher: "Jeanne Ravanel",
+    publisher: "Josua Carl",
     host: {
-      name: "Vercel Inc.",
-      address: "440 N Barranca Ave #4133, Covina, CA 91723, USA",
-      url: "https://vercel.com",
+      name: "GitHub Inc",
+      address: "88 Colin P Kelly Jr St, San Francisco, CA 94107-2008, USA",
+      url: "https://github.com",
     },
   },
 
@@ -244,26 +226,26 @@ export const SITE = {
   // content above) to ship the site in another language — no component edits.
   ui: {
     skipToContent: "Skip to content",
-    menuOpenLabel: "Open menu",
-    closedLabel: "Closed",
-    hoursTitle: "Opening hours",
-    findUsTitle: "Find us",
-    infoEyebrow: "Practical",
-    infoTitle: "Visit us",
-    directionsLabel: "Directions on Google Maps",
-    googleProfileLabel: "Our Google profile",
-    readAllReviews: "Read all reviews on Google →",
-    ratingLabel: "Rating:", // followed by "4 out of 5"
-    ratingOutOf: "out of 5",
-    reviewsScoreLabel: "from Google reviews", // under the big average score
-    formNameLabel: "Your name",
-    formEmailLabel: "Your email",
-    formMessageLabel: "Your message",
-    formSubmitLabel: "Send message",
-    formHoneypotLabel: "Leave this field empty",
-    legalNoticeLabel: "Legal notice",
-    privacyPolicyLabel: "Privacy policy",
-    allRightsReserved: "All rights reserved",
+    menuOpenLabel: "Menü öffnen",
+    closedLabel: "Geschlossen",
+    hoursTitle: "Bürozeiten",
+    findUsTitle: "Sie finden uns hier:",
+    infoEyebrow: "Infos",
+    infoTitle: "Besuchen sie uns",
+    directionsLabel: "Wegbeschreibung",
+    googleProfileLabel: "Unser Google Profil",
+    readAllReviews: "Lesen sie alle Bewertungen bei Google →",
+    ratingLabel: "Bewertungen:", // followed by "4 out of 5"
+    ratingOutOf: "von 5",
+    reviewsScoreLabel: "von Google Bewertungen", // under the big average score
+    formNameLabel: "Ihr Name",
+    formEmailLabel: "Ihre Email",
+    formMessageLabel: "Ihre Nachricht",
+    formSubmitLabel: "Senden",
+    formHoneypotLabel: "Lassen sie das Feld leer",
+    legalNoticeLabel: "Impressum",
+    privacyPolicyLabel: "Datenschutz",
+    allRightsReserved: "Alle Rechte vorenthalten",
     notFoundTitle: "Page not found",
     notFoundText: "The page you are looking for does not exist or has moved.",
     notFoundCta: "Back to the home page",
