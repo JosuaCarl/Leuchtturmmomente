@@ -19,7 +19,7 @@ export const SITE = {
   lang: "de",
   // BCP 47 locale used for Open Graph (e.g. "en_US", "fr_FR", "de_DE")
   ogLocale: "de_DE",
-  name: "Leuchtturmmomente",
+  name: "Leuchtturm Momente",
   tagline: "Trauerreden, die berühren und trösten",
   description:
     "Individuelle Trauerreden - Gestaltung und Vortrag.",
@@ -31,7 +31,7 @@ export const SITE = {
     // "SportingGoodsStore", "TouristInformationCenter"... (see schema.org)
     schemaType: "ProfessionalService",
     phone: "+49123456789",
-    email: "e_twesten@yahoo.com",
+    email: "e_twesten@Noch.Nicht",
     address: {
       street: "Fantasiestraße 12",
       postalCode: "12345",
@@ -84,8 +84,8 @@ export const SITE = {
     // Leave "" to disable.
     titleHighlight: "Momente",
     subtitle:
-      "Individuelle Trauerreden, die Nähe stiften und Halt geben. Hinter Leuchtturmmomente steht die Überzeugung, dass aus jedem Leben prägende Momente bestehen bleiben.",
-    image: "../src/images/hero.png",
+      "Individuelle Trauerreden, die Nähe stiften und Halt geben. Hinter Leuchtturmmomenten steht die Überzeugung, dass aus jedem Leben prägende Eindrücke bestehen bleiben.",
+    image: "images/hero.png",
     imageAlt: "Freshly baked sourdough loaf held on a linen cloth",
     primaryCta: { label: "Unsere Angebote", href: "/#services" },
     secondaryCta: { label: "Hier finden sie uns", href: "/#info" },
@@ -129,8 +129,8 @@ export const SITE = {
       "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.",
       "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.",
     ],
-    image: "../src/images/about.jpg",
-    imageAlt: "Baker's hands kneading floured dough on a dark workbench",
+    image: "/images/about.jpg",
+    imageAlt: "Lampe mit einzelnen ausstrahlenden Lichtpunkten.",
   },
 
   // --- Gallery (4 to 8 images) ---------------------------------------------------

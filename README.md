@@ -1,13 +1,4 @@
-# Chalet 🏔️
-
-**The Astro theme for local businesses.**
-
-Built in the Chamonix valley and battle-tested on real small-business sites,
-Chalet gets a bakery, restaurant, guesthouse, salon or workshop online in a
-day — with the local SEO and privacy boxes already ticked.
-
-> **One config file. Local SEO built in. GDPR-ready. No cookies, no trackers,
-> (almost) no JavaScript.**
+# Leuchtturm Momente
 
 [Live demo](https://astro-chalet.vercel.app) · [Changelog](CHANGELOG.md) · MIT license
 
@@ -44,9 +35,9 @@ all without a maintenance burden.
 
 ```bash
 # Use this repo as a template (or clone it), then:
-npm install     # Node >= 22.12
-npm run dev     # http://localhost:4321
-npm run build   # generates the static site in dist/
+pnpm install     # Node >= 22.12
+pnpm run dev     # http://localhost:4321
+pnpm run build   # generates the static site in dist/
 ```
 
 ## Make it yours — checklist
@@ -127,4 +118,3 @@ Pexels — free to use, attribution not required but appreciated:
 
 | File | Photographer | Source |
 |---|---|---|
-| `hero.webp` | Skyler Ewing | [pexels.com/photo/10024751](https://www.pexels.com/photo/10024751/) |
