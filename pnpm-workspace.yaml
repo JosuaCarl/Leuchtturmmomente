@@ -1,2 +1,4 @@
 minimumReleaseAge: 0
-neverBuiltDependencies: []
+allowBuilds:
+  esbuild: true
+  sharp: true
