@@ -11,8 +11,8 @@ function replaceLink(paragraph: string, replacer: string, link: string) {
   let containsLink = paragraph.includes(replacer)
   if (containsLink){
     const index = paragraph.indexOf(replacer)
-    let after = paragraph.slice(0, index)
-    let before = paragraph.slice(index + replacer.length)
+    let before = paragraph.slice(0, index)
+    let after = paragraph.slice(index + replacer.length)
     return `${before}<a href="${link}">${replacer}</a>${after}`
   }
   return paragraph;
@@ -44,8 +44,7 @@ else {
     </figure>
     <div class="about-text reveal">
       {about.eyebrow && <p class="section-eyebrow">{about.eyebrow}</p>}
-      <h2>{about.title}</h2>
-      {paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+      <h2>{about.title}</h2>{paragraphs.map((paragraph) => (<p set:html={paragraph} />))}
     </div>
   </div>
 </section>
